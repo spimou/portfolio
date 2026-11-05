@@ -1,0 +1,280 @@
+:root {
+  --light-blue: #0c8ce9;
+  --dark-blue: #243c58;
+  --bg: #F2BB17;
+  --text: #000;
+  --header-h: 64px;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-text: 'IBM Plex Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+h1, h2, h3 { font-family: var(--font-heading); color: var(--dark-blue); margin: 0; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: var(--header-h);
+  background: #f2bb17c4;
+  border-bottom: 1px solid var(--dark-blue);
+}
+
+.header-inner {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo, .site-nav a {
+  font-family: var(--font-heading);
+  color: var(--dark-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo { font-size: 1.75rem; }
+
+.site-nav { display: flex; gap: 16px; }
+.site-nav a { font-size: 1.05rem; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--light-blue); }
+
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--dark-blue);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--light-blue);
+  outline-offset: 3px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding: 40px 24px;
+}
+
+/* Map as the hero background, with an X between its corners */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .30;
+    transition: opacity .2s;
+    overflow: hidden;
+    background: url(../assets/map.png) repeat-x center center / auto;
+    border: 1px solid #0c8ce9;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: 50%;
+}
+
+.hero-bg:hover { opacity: .9; }
+.map-x {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.map-x line {
+  stroke: var(--light-blue);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: clamp(24px, 6vw, 80px); */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: clamp(120px, 16vh, 170px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+  border: 2px solid var(--dark-blue);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: right;
+}
+.hero-text > * {
+  margin: 0;
+  padding: 5px;
+  background: #f2bb17;
+}
+.hi { color: var(--light-blue); font-family: var(--font-heading); font-size: 1.25rem; }
+.hero-text h1 { font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 700; }
+.role {
+  font-family: var(--font-heading);
+  color: var(--dark-blue);
+  font-size: 1.1rem;
+}
+.tagline {
+  color: var(--light-blue);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 24px 0;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--light-blue);
+}
+
+.job { margin-bottom: 36px; }
+.job h3 { font-family: var(--font-text); color: var(--text); font-size: 1rem; font-weight: 500; }
+.job .sep { margin: 0 4px; }
+.job .company { font-weight: 400; }
+.job p { margin: 0; }
+.job .years { font-size: .8075rem; margin-bottom: 5px; }
+
+.center { text-align: center; margin: 40px 0 8px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--dark-blue);
+  background: transparent;
+  border: 1px solid var(--light-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--light-blue); }
+.btn svg { width: 22px; height: 22px; color: var(--dark-blue); }
+
+/* Skills */
+.skills dl { margin: 0; }
+.skills dl > div {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  column-gap: 24px;
+  padding: 10px 0;
+}
+.skills dt { text-align: right; font-weight: 500; text-transform: capitalize; }
+.skills dd { margin: 0; }
+.skillssep { position: absolute;
+    padding-left: 5px; }
+    
+
+/* Contact */
+.contact { padding-bottom: 80px; margin-top: 40px; margin-bottom: 10px; }
+.social { display: flex; gap: 24px; flex-wrap: wrap; }
+
+/* ---------- Demos ---------- */
+.coming-soon {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 96px;
+}
+
+/* ---------- Tablet / mobile ---------- */
+@media (max-width: 768px) {
+  :root { --header-h: 56px; }
+
+  .header-inner { padding: 0 16px; }
+  .menu-toggle { display: flex; }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--dark-blue);
+  }
+  .site-nav.open { display: flex; }
+  .site-nav a { padding: 14px 16px; font-size: 1.1rem; }
+
+  .hero { padding: 24px 16px; }
+
+  /* Avatar 40% smaller, on its own line, aligned left */
+  .hero-top { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .hero-text { align-items: flex-start; text-align: left; }
+  .avatar { width: clamp(72px, 20vw, 102px); } /* ~40% smaller than the 170px desktop size */
+  .hi { display: none; }
+  .hero-text h1 { font-size: 1.4rem; }
+  .role { font-size: 1rem; }
+
+  .hero-bg{background-size: 100%;}
+
+  .tagline { font-size: 1.05rem; }
+
+  .section { padding: 32px 16px 0; }
+
+  /* Skills: bold title on one line, skills on the next line, all aligned left; blank line between groups */
+  .skills dl > div {
+    display: block;
+    padding: 0 0 1.4em;
+    text-align: left;
+  }
+  .skills dt { text-align: left; }
+}
