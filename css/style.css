@@ -102,7 +102,7 @@ a:focus-visible, button:focus-visible {
     opacity: .30;
     transition: opacity .2s;
     overflow: hidden;
-    background: url(../assets/map.png) repeat-x center center / auto;
+    background: url(./assets/map.png) repeat-x center center / auto;
     border: 1px solid #0c8ce9;
     background-position-x: left;
     background-position-y: center;
