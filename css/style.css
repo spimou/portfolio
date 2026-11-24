@@ -1,8 +1,10 @@
 :root {
   --light-blue: #0c8ce9;
-  --dark-blue: #243c58;
-  --bg: #F2BB17;
-  --text: #000;
+  /* --dark-blue: #243c58;
+  --bg: #F2BB17; */
+    --dark-blue: #dfad18 ;
+  --bg:  #1a2a3d;
+  --text: #b3b3b3;
   --header-h: 64px;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-text: 'IBM Plex Sans', sans-serif;
@@ -24,7 +26,7 @@ body {
   line-height: 1.4;
 }
 
-h1, h2, h3 { font-family: var(--font-heading); color: var(--dark-blue); margin: 0; }
+h1, h2, h3 { font-family: var(--font-heading); color: var(--light-blue); margin: 0; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -32,7 +34,7 @@ h1, h2, h3 { font-family: var(--font-heading); color: var(--dark-blue); margin: 
   top: 0;
   z-index: 10;
   height: var(--header-h);
-  background: #f2bb17c4;
+  background: #1a2a3d4d;
   border-bottom: 1px solid var(--dark-blue);
 }
 
@@ -48,7 +50,7 @@ h1, h2, h3 { font-family: var(--font-heading); color: var(--dark-blue); margin: 
 
 .logo, .site-nav a {
   font-family: var(--font-heading);
-  color: var(--dark-blue);
+  color: var(--light-blue);
   font-weight: 700;
   text-decoration: none;
 }
@@ -125,7 +127,7 @@ a:focus-visible, button:focus-visible {
 .hero-top {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   /* gap: clamp(24px, 6vw, 80px); */
   max-width: 1000px;
   margin: 0 auto;
@@ -151,13 +153,13 @@ a:focus-visible, button:focus-visible {
 .hero-text > * {
   margin: 0;
   padding: 5px;
-  background: #f2bb17;
+  background: var(--dark-blue) ;
 }
 .hi { color: var(--light-blue); font-family: var(--font-heading); font-size: 1.25rem; }
 .hero-text h1 { font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 700; }
 .role {
   font-family: var(--font-heading);
-  color: var(--dark-blue);
+  color: var(--light-blue);
   font-size: 1.1rem;
 }
 .tagline {
@@ -179,7 +181,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 400;
   padding-bottom: 12px;
   margin-bottom: 18px;
-  border-bottom: 1px solid var(--light-blue);
+  border-bottom: 1px solid var(--dark-blue);
 }
 
 .job { margin-bottom: 36px; }
