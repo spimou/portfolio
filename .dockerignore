@@ -1,6 +1,5 @@
 node_modules
-
-CLAUDE.node_modules
-
+CLAUDE.md
+.env.local
 context
 
