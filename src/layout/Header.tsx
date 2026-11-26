@@ -18,11 +18,11 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Projects', to: '/projects' },
-  { label: 'Skills', to: '/skills' },
+  { label: 'Projects', to: '/#projects' },
+  { label: 'Skills', to: '/#skills' },
   { label: 'Prototypes', to: '/poc' },
   { label: 'About', to: '/about' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Contact', to: '/#contact' },
 ]
 
 function Header() {

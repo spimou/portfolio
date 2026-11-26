@@ -1,5 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react'
-import { Outlet } from 'react-router'
+import { Outlet, ScrollRestoration } from 'react-router'
 import Footer from './Footer'
 import Header from './Header'
 
@@ -11,6 +11,7 @@ function MainLayout() {
         <Outlet />
       </Box>
       <Footer />
+      <ScrollRestoration />
     </Flex>
   )
 }
