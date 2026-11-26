@@ -7,8 +7,7 @@ function PageSection(props: FlexProps) {
       direction="column"
       minH="100vh"
       w={{ base: '95%', lg: '80%', xl: '70%' }}
-      mx="auto"
-      bg="blue"
+      mx="auto" 
       {...props}
     />
   )

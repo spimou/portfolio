@@ -3,8 +3,7 @@
   flex-direction: column;
   min-height: 100vh;
   width: 95%;
-  margin-inline: auto;
-  background-color: blue;
+  margin-inline: auto; 
 }
 
 /* Chakra lg breakpoint */
