@@ -15,7 +15,7 @@ const router = createBrowserRouter([
       { path: 'about', element: <AboutPage /> },
     ],
   },
-])
+], { basename: import.meta.env.BASE_URL })
 
 function App() {
   return <RouterProvider router={router} />

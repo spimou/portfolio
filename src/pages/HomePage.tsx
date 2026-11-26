@@ -33,7 +33,7 @@ function HomePage() {
         <p>Web app for excavation geo data.Designed a polygon-extrusion solution to solve overlapping</p>
       </article>
       <div class="center">
-        <a class="btn" href="./assets/Spyridon-Mousouris-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <a class="btn" href={`${import.meta.env.BASE_URL}assets/Spyridon-Mousouris-CV.pdf`} target="_blank" rel="noopener noreferrer">Download CV</a>
       </div>
         </PageArticle>
 

@@ -6,8 +6,8 @@ function PageArticle(props: FlexProps) {
       as="article"
       direction="column" 
       w={{ base: '100%', lg: '100%', xl: '100%' }}
-      margin={'5px'}
-      padding={'5px'}
+      margin={'20px'}
+      padding={'20px'}
       mx="auto" 
       scrollMarginTop="60px"
       {...props}
