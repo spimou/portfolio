@@ -8,6 +8,8 @@ function PageArticle(props: FlexProps) {
       w={{ base: '100%', lg: '100%', xl: '100%' }}
       margin={'20px'}
       padding={'20px'}
+      borderBottom={'1px solid'}
+      borderBottomColor="brand.textSoft"
       mx="auto" 
       scrollMarginTop="60px"
       {...props}
