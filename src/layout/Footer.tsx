@@ -1,8 +1,10 @@
+import { Flex, Text } from '@chakra-ui/react'
+
 function Footer() {
   return (
-    <footer>
-      <p>Spiros Mousouris, PhD</p>
-    </footer>
+    <Flex as="footer" w="100%" h="180px" align="center" justify="center">
+      <Text textAlign="center">© Spiros Mousouris 2026</Text>
+    </Flex>
   )
 }
 
