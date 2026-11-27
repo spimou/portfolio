@@ -95,7 +95,7 @@ function HomePage() {
       <PageSection mt="-30px" position="relative" zIndex="1">
 
         <PageArticle id="projects" mt="0">
-            <Heading as="h1">Selected Projects </Heading> 
+            <Heading as="h1">// Selected Projects  </Heading>    
                   <article class="job">
         <h3>SINGLE DIGITAL MAP <span class="sep">//</span> <span class="company"> Terra-Mapping The Globe</span></h3>
         <p class="years">2023 – 2026</p>

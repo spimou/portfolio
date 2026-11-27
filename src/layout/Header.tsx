@@ -53,7 +53,7 @@ function Header() {
     >
       <Link asChild {...NAV_LINK_PROPS}>
         <RouterLink to="/">
-          <Text as="span">SM</Text>
+          <Text as="span" color={'brand.accent'}>SM</Text>
         </RouterLink>
       </Link>
 
