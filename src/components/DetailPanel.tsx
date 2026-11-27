@@ -14,7 +14,7 @@ interface PropertyGroup {
   keys: string[]
 }
 
-const CONTEXTS_URL = '/data/contexts.geojson'
+const CONTEXTS_URL = `${import.meta.env.BASE_URL}data/contexts.geojson`
 
 
 //shown in this order; any other non-empty property ends up in "Other"

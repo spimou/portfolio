@@ -17,7 +17,7 @@ const SATELLITE_STYLE: StyleSpecification = {
   sources: {
     satellite: {
       type: 'raster',
-      url: `https://api.maptiler.com/tiles/satellite-v2/tiles.json?key=${import.meta.env.MAPTILE_KEY ?? ''}`,
+      url: `https://api.maptiler.com/tiles/satellite-v2/tiles.json?key=${import.meta.env.VITE_MAPTILE_KEY ?? ''}`,
       tileSize: 512
     }
   },
