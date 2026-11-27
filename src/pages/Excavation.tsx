@@ -1,9 +1,9 @@
 import { Grid, Box } from "@chakra-ui/react" 
-import Sidebar from "./components/Sidebar"
-import MapGate from "./components/MapGate"
-import DetailPanel from "./components/DetailPanel"
-import { Toaster } from "@/components/ui/toaster"
-import { useExcavationStore } from "./excavationStore"
+import Sidebar from "../components/Sidebar"
+import MapGate from "../components/MapGate"
+import DetailPanel from "../components/DetailPanel"
+import { Toaster } from "../components/ui/toaster"
+import { useExcavationStore } from "../excavationStore"
 import { useEffect } from 'react'
 
  

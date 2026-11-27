@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: 'poc', element: <PoCPage /> },
       { path: 'about', element: <AboutPage /> },
-      { path: 'excavation-inspector', element: <Excavation /> },
+      { path: 'excavation', element: <Excavation /> },
     ],
   },
 ], { basename: import.meta.env.BASE_URL })

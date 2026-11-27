@@ -3,7 +3,7 @@ import * as maplibregl from 'maplibre-gl'
 import type { MapMouseEvent, MapGeoJSONFeature, ExpressionSpecification, StyleSpecification } from 'maplibre-gl'
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useExcavationStore } from '../excavationStore'
-import { toaster } from "@/components/ui/toaster"
+import { toaster } from "../components/ui/toaster"
 import { MdLayersClear } from "react-icons/md" 
 
 import 'maplibre-gl/dist/maplibre-gl.css';
