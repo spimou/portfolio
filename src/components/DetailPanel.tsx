@@ -85,7 +85,7 @@ const DetailPanel = () => {
       onRequestDismiss={(e) => e.preventDefault()}
     >
       <Portal>
-        <Drawer.Positioner pointerEvents="none">
+        <Drawer.Positioner pointerEvents="none" paddingTop="60px">
           <Drawer.Content height="100%" pointerEvents="auto" maxW="none" width={{ base: "50%", md: "40%", xl: "25%" }} bg="#2d2b2b">
             <Drawer.Header borderBottomWidth="1px" flexDirection="column" alignItems="flex-start" gap="2">
               <Drawer.Title>Context {selected?.Context_ID || '-'}</Drawer.Title>

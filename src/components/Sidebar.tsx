@@ -77,7 +77,7 @@ const Sidebar = () => {
               </Button>
 
              <Portal>
-               <Drawer.Positioner pointerEvents="none">
+               <Drawer.Positioner pointerEvents="none" paddingTop="60px">
                  <Drawer.Content left="0" right="0"  height="100%" pointerEvents="auto" bg='gray.600' fontSize="lg" maxW="none" width={{ base: "30%", md: "30%", xl: "20%" }} >
                          <Drawer.Header p="1" />
                    <Drawer.Body paddingRight="5px" paddingLeft="5px" mt={smallSize ? "30px" : undefined} >
