@@ -4,6 +4,7 @@ import MainLayout from './layout/MainLayout'
 import AboutPage from './pages/AboutPage'
 import HomePage from './pages/HomePage'
 import PoCPage from './pages/PoCPage'
+import Excavation from './pages/Excavation'
 
 const router = createBrowserRouter([
   {
