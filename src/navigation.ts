@@ -8,7 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Skills', to: '/#skills' },
   { label: 'Prototypes', to: '/poc' },
   { label: 'About', to: '/about' },
-  { label: 'Contact', to: '/#contact' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 // Keep in sync with the <title> in index.html

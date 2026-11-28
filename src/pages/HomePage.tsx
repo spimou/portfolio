@@ -1,11 +1,58 @@
-import { Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { Link as RouterLink } from 'react-router'
 import PageSection from '../components/PageSection'
 import PageArticle from '../components/PageArticle'
 import HeroSpotlight from '../components/HeroSpotlight'
 import profileImage from '../assets/images/me.jpg'
 import mapImage from '../assets/images/map.avif'
+import ProjectCard, { type Project } from '../components/ProjectCard'
+import DownloadCvButton from '../components/DownloadCvButton'
+import sdmImage from '../assets/images/signgledigitalmap.png'
+import sikyonImage from '../assets/images/sikyon.png'
+import vesselQuadImage from '../assets/images/vesselquad.png'
+import SocialButtons from '../components/SocialButtons'
 
- 
+const PROJECTS: Project[] = [
+  {
+    company: 'Terra – Mapping the Globe',
+    years: '2023 – 2026',
+    title: 'Single Digital Map',
+    url: 'https://sdigmap.tee.gov.gr/sdmportal/en/',
+    image: sdmImage,
+    imageAlt: 'Map of city streets blending into 3D buildings',
+    points: [
+      'Brings land and urban planning data together on one online map.',
+      'Helps to record issues, locate them on the map and follow how they are resolved.',
+      'I developed the record editing / relating functionality and searching via a map.',
+    ],
+  },
+  {
+    company: 'Dipylon',
+    years: '2022 – 2023',
+    title: 'Sikyon Excavation Map',
+    url: 'https://v1.sikyonexcavation.gr/',
+    image: sikyonImage,
+    imageAlt: '3D map of excavated areas at the ancient site of Sikyon',
+    points: [
+      'Supports exploring the findings of an archaeological excavation on an interactive map.',
+      'Makes overlapping areas of the site easy to tell apart and understand.',
+      'I designed and developed the entire app, in collaboration with GIS experts and archaeologists.',
+    ],
+  },
+  {
+    company: 'Propulsion Analytics',
+    years: '2019 – 2021',
+    title: 'VesselQUAD',
+    url: 'https://propulsionanalytics.com/VesselQUAD/',
+    image: vesselQuadImage,
+    imageAlt: 'VesselQUAD dashboard with a vessel route map and performance charts',
+    points: [
+      'Shows how ships are performing through live data, maps and charts.',
+      'Helps shipping companies spot wasted fuel and decide when a ship needs cleaning or maintenance.',
+      'Developed the interface and how it consumes data, in collaboration with naval engineers.',
+    ],
+  },
+]
 
 function HomePage() {
   return (
@@ -95,8 +142,27 @@ function HomePage() {
       <PageSection mt="-30px" position="relative" zIndex="1">
 
         <PageArticle id="projects" mt="0">
-            <Heading as="h1">// Selected Projects  </Heading>     
-      
+            <Heading as="h1">// Selected Projects  </Heading>
+            <Flex direction={{ base: 'column', md: 'row' }} gap="6" mt="4">
+              {PROJECTS.map((project) => (
+                <ProjectCard key={project.title} {...project} />
+              ))}
+            </Flex>
+            <Button
+              asChild
+              alignSelf="center"
+              mt="8"
+              bg="brand.accent"
+              color="brand.background"
+              _hover={{ bg: 'brand.secondary' }}
+            >
+              <RouterLink to="/about">View Full CV</RouterLink>
+            </Button>
+            <Text textAlign="center" color="fg.muted" my="3">
+              or
+            </Text>
+            <DownloadCvButton />
+            
         </PageArticle>
 
         <PageArticle id="skills">
@@ -105,6 +171,7 @@ function HomePage() {
 
         <PageArticle id="contact">
             <Heading as="h1">Contact</Heading> 
+            <SocialButtons />
         </PageArticle>
 
         
