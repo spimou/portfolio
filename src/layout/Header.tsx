@@ -11,19 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { LuMenu } from 'react-icons/lu'
 import { Link as RouterLink } from 'react-router'
-
-interface NavItem {
-  label: string
-  to: string
-}
-
-const NAV_ITEMS: NavItem[] = [
-  { label: 'Projects', to: '/#projects' },
-  { label: 'Skills', to: '/#skills' },
-  { label: 'Prototypes', to: '/poc' },
-  { label: 'About', to: '/about' },
-  { label: 'Contact', to: '/#contact' },
-]
+import { NAV_ITEMS } from '../navigation'
 
 const NAV_LINK_PROPS = {
   color: 'fg',

@@ -1,9 +1,17 @@
 import { Box, Flex } from '@chakra-ui/react'
-import { Outlet, ScrollRestoration } from 'react-router'
+import { useEffect } from 'react'
+import { Outlet, ScrollRestoration, useLocation } from 'react-router'
+import { getPageTitle } from '../navigation'
 import Footer from './Footer'
 import Header from './Header'
 
 function MainLayout() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    document.title = getPageTitle(pathname, hash)
+  }, [pathname, hash])
+
   return (
     <Flex direction="column" minH="100vh">
       <Header />

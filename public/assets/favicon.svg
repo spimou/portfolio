@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Colors mirror brand.elevated and brand.textSoft in src/theme.ts -->
+  <rect width="64" height="64" rx="12" fill="#221E1B"/>
+  <!-- Letters are drawn as paths so they render without any font loading -->
+  <g fill="none" stroke="#B8B8B0" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M26 24C24.5 21.5 22 20 18.5 20C14 20 11 22.5 11 26C11 33.5 26 30 26 38C26 41.5 23 44 18.5 44C14.5 44 11.500 42.500 10 40"/>
+    <path d="M34 44V20L44 34L54 20V44"/>
+  </g>
+</svg>
